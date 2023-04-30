@@ -21,6 +21,7 @@ def browser(request):
     options = Options()
     options.add_experimental_option("prefs", {"intl.accept_languages": language})
 
+    """ Требование из задания: 5. Достаточно, чтобы код работал только для браузера Сhrome. """
     browser = webdriver.Chrome(options=options)
     browser.implicitly_wait(5)
     yield browser
